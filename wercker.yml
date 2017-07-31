@@ -28,3 +28,11 @@ build:
         name: go test
         code: |
           go test ./...
+deploy:
+  steps:
+    - internal/docker-push
+      username: toby
+      password: 33fcf353f144828a071abd7b655f28ffa60f62ba664f47e922b454eb7aa2655c
+      tag: my-amazing-tag
+      repository: registry-alpha.oracledx.com/tvjames/getting-started-golang
+      registry: https://registry-alpha.oracledx.com
